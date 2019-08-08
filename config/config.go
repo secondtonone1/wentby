@@ -37,4 +37,5 @@ var (
 	ErrWebListenFailed     = errors.New("Webserver listen failed!")
 	ErrWebSocketDail       = errors.New("Websocket dail failed!")
 	ErrWebSocketWrite      = errors.New("Websocket write failed!")
+	ErrAsyncSendFailed     = errors.New("Async Send Failed!")
 )

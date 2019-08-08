@@ -47,8 +47,8 @@ func (wt *WtServer) acceptLoop() error {
 	}
 
 	newsess := NewSession(tcpConn, wt.stopedChan)
-	newsess.Start()
 	fmt.Println("A client connected :" + tcpConn.RemoteAddr().String())
+	newsess.Start()
 	return nil
 }
 
