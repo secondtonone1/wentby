@@ -160,7 +160,7 @@ type MsgPacket struct {
 一个消息由MsgHead和MsgBody构成, MsgHead包括2字节Id, 2字节Len。MsgData包括[]byte类型的Data。
 protocol.go提供了解析消息，读取消息，构造消息的功能。其实就是提供了TCP字节流和MsgPacket之间的转换。
 stream.go实现了大端小端读写。
-###netmodel
+### netmodel
 netmodel提供了网络层的基本功能。
 client.go 提供了客户端连接和收发消息的api
 server.go 提供了服务器处理消息和监听消息的api
