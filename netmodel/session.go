@@ -62,7 +62,7 @@ func (se *Session) Close() error {
 func (se *Session) CloseSendChan() error {
 	if atomic.CompareAndSwapInt32(&se.sendChanClosed, 0, 1) {
 		close(se.sendChan)
-		fmt.Println("send goroutine exit!")
+		fmt.Println("recv goroutine exit!")
 	}
 	return nil
 }
@@ -82,7 +82,9 @@ func (se *Session) SafeSetReadDeadline(delt time.Duration) {
 
 func (se *Session) sendLoop() {
 	defer se.Close()
-	defer se.CloseSendChan()
+	defer func() {
+		fmt.Println("send goroutine exit!")
+	}()
 	for {
 		select {
 		case <-se.stopedChan:
@@ -108,9 +110,7 @@ func (se *Session) sendLoop() {
 
 func (se *Session) recvLoop() {
 	defer se.Close()
-	defer func() {
-		fmt.Println("recv goroutine exit!")
-	}()
+	defer se.CloseSendChan()
 	var packet interface{}
 	var err error
 	for {
