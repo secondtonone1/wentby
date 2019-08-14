@@ -34,5 +34,5 @@ func RegOnceHelloReq() {
 		return nil
 	}
 
-	netmodel.MsgHandler.RegMsgHandler(ONCEHELLO_REQ, OnceHello)
+	netmodel.GetMsgHandlerIns().RegMsgHandler(ONCEHELLO_REQ, OnceHello)
 }

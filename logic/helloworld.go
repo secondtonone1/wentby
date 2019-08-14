@@ -32,5 +32,5 @@ func RegHelloWorldReq() {
 		return nil
 	}
 
-	netmodel.MsgHandler.RegMsgHandler(HELLOWORLD_REQ, HelloworldReq)
+	netmodel.GetMsgHandlerIns().RegMsgHandler(HELLOWORLD_REQ, HelloworldReq)
 }

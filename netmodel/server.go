@@ -5,7 +5,6 @@ import (
 	"net"
 	"os"
 	"os/signal"
-	"runtime"
 	"strconv"
 	"sync"
 	"syscall"
@@ -13,7 +12,6 @@ import (
 )
 
 func NewServer() (*WtServer, error) {
-	runtime.GOMAXPROCS(runtime.NumCPU())
 	address := config.SERVER_IP + ":" + strconv.Itoa(config.SERVER_PORT)
 	listenert, err := net.Listen(config.SERVER_TYPE, address)
 	if err != nil {
