@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "F+tqxPGFt5x7DKZakbbMmENX1oQ=",
+			"path": "golang.org/x/net/websocket",
+			"revision": "a8b05e9114ab0cb08faec337c959aed24b68bf50",
+			"revisionTime": "2019-09-18T00:32:58Z"
+		}
+	],
+	"rootPath": "wentby"
+}
