@@ -1,8 +1,12 @@
 # wentby
+
+## 此为最初版，完整版链接
+[https://github.com/secondtonone1/wentserver](https://github.com/secondtonone1/wentserver)
 ## 简介
 wentby is a network frame, it supports tcp, websocket, http comunication
 
 wentby是一个用golang封装的基本的网络框架，支持TCP, WEBSOCKET, HTTP类型的通信。封装并不复杂，这么做有两个目的，一是使他人可以基于此框架二次封装和改造，二是可作为基本的通信框架用于游戏，互联网等应用中。
+
 ## 源码介绍
 ### config介绍
 config 文件夹下实现了config.go,这里配置了tcpserver和webservr的端口，地址，以及服务器错误码定义。
